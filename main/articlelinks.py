@@ -41,4 +41,5 @@ def article_links_from_category(CATEGORY_URL):
 
     return links
 
-
+#CATEGORY_URL = "https://techfundingnews.com/category/us/"
+#print(article_links_from_category(CATEGORY_URL))

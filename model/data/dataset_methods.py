@@ -1,5 +1,5 @@
 import torch
-def build_vocab(data: list[str]) -> tuple[dict,dict]:
+def build_vocab(data: list[str]) -> tuple[dict,dict,int]:
     """
     Builds a vocabulary using the data, taking into account unknown words and padding.
 
@@ -23,7 +23,7 @@ def build_vocab(data: list[str]) -> tuple[dict,dict]:
                 data_idx[y] = count
                 idx_data[count] = y
                 count += 1
-    return data_idx, idx_data
+    return data_idx, idx_data, count
 
 def tokens_vocab(tokens, data_idx):
     """
